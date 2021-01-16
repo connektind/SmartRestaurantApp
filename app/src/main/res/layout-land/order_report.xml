@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hint_color" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/mmrtextb"
+                android:layout_weight="1.5"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_weight="0.5"
+                android:id="@+id/date"
+                android:fontFamily="@font/mmrtext"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Customer"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/mmrtextb"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customer"
+                android:layout_weight="0.5"
+                android:text=""
+                android:gravity="start"
+                android:fontFamily="@font/mmrtext"
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Delivery Type"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/mmrtextb"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:layout_weight="0.5"
+                android:text=""
+                android:fontFamily="@font/mmrtext"
+                android:id="@+id/delivery_type"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Total Amount"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/mmrtextb"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:layout_weight="0.5"
+                android:text=""
+                android:fontFamily="@font/mmrtext"
+                android:id="@+id/total_ammount"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/view_order"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/printer"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/mmrtextb"
+                android:gravity="center"
+                android:text="Print"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hint_color" />
+
+
+</LinearLayout>

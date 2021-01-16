@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smartrestaurantapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_logo_app"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_logo_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartRestaurantApp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activitys.bluethoodPrinter.NewBluethooth.BlueThoothDeviceListActivity"></activity>
+        <activity android:name=".activitys.bluethoodPrinter.BillingPDFCreateActivity" />
+        <activity android:name=".activitys.bluethoodPrinter.BTPrinterActivity" />
+        <activity android:name=".activitys.bluethoodPrinter.DeviceListActivity" />
+        <activity android:name=".activitys.bluethoodPrinter.BluetoothPrinterActivity" />
+        <activity android:name=".activitys.WebViewForgotPasswordActivity" />
+        <activity android:name=".activitys.EditProfileActivity" />
+        <activity android:name=".activitys.ViewProfileActivity" />
+        <activity android:name=".activitys.OrderHistroryActivity" />
+        <activity android:name=".activitys.OrderReportActivity" />
+        <activity android:name=".activitys.OrderDetailActivity" />
+        <activity android:name=".activitys.AvailableOrderActivity" />
+        <activity android:name=".activitys.DashBoardActivity" />
+        <activity android:name=".activitys.PasswordSucessfullyActivity" />
+        <activity android:name=".activitys.ResetPasswordActivity" />
+        <activity android:name=".activitys.OTPVerificationActivity" />
+        <activity android:name=".activitys.MobileNumberVerifyActivity" />
+        <activity android:name=".activitys.CraeteAccountActivity" />
+        <activity android:name=".activitys.LoginActivity" />
+        <activity android:name=".activitys.bluethoodPrinter.BTDeviceList" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activitys.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="android.allow_multiple_resumed_activities"
+            android:value="true" />
+
+        <service android:name=".appservice.PrinterService" />
+    </application>
+
+</manifest>

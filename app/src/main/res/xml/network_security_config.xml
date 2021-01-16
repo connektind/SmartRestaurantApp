@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+<!--        <domain includeSubdomains="true">35.244.12.111</domain>-->
+        <domain includeSubdomains="true">menumanagerstaging.azurewebsites.net</domain>
+        <domain includeSubdomains="true">smartrestaurant.com</domain>
+<!--        <domain includeSubdomains="true">35.200.220.64</domain>-->
+    </domain-config>
+
+
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

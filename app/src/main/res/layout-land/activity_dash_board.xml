@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/background_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collaspingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="end"
+                    app:layout_scrollFlags="scroll|snap">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="end|center"
+                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginRight="25dp"
+                            android:fontFamily="@font/mmrtextb"
+                            android:gravity="center"
+                            android:text="Dashboard"
+                            android:textColor="@color/red"
+                            android:textSize="24dp"
+                            android:textStyle="bold"
+                            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+                        <ImageView
+                            android:id="@+id/menu_nav"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="21dp"
+                            android:background="@drawable/back_left" />
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <!--            <androidx.core.widget.NestedScrollView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_gravity="fill_vertical"-->
+            <!--                app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+                            <include layout="@layout/dashboard_main" />
+            <!--            </androidx.core.widget.NestedScrollView>-->
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        android:layout_height="match_parent">
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/my_navigation_items"
+        app:itemHorizontalPadding="10dp"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        android:background="@color/navi_menu_red"
+        android:layout_marginRight="-550dp"
+        android:layout_height="match_parent">
+    </com.google.android.material.navigation.NavigationView>
+    </LinearLayout>
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginEnd="-65dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_gravity="start"-->
+<!--        app:headerLayout="@layout/navigation_menu">-->
+
+<!--    </com.google.android.material.navigation.NavigationView>-->
+</androidx.drawerlayout.widget.DrawerLayout>
+

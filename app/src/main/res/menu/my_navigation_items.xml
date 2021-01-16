@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/dashboard"
+            android:onClick="dashboard"
+
+            android:icon="@drawable/ic_dashboard_24px"
+            android:title="Dashboard" />
+
+        <item android:id="@+id/available_order"
+            android:onClick="availableOrder"
+            android:icon="@drawable/ic_shopping_basket_24px"
+            android:title="Available Orders" />
+
+        <item android:id="@+id/order_history"
+            android:icon="@drawable/ic_restore_24px"
+            android:onClick="orderHistory"
+            android:title="Order History" />
+
+        <item android:id="@+id/settings"
+            android:icon="@drawable/ic_settings_24px"
+            android:onClick="settings"
+            android:title="Settings" />
+
+        <item android:id="@+id/order_report"
+            android:icon="@drawable/ic_assignment_24px"
+            android:onClick="orderReport"
+            android:title="Order Reports" />
+
+        <item android:id="@+id/logout"
+            android:icon="@drawable/ic_power_settings_new_24px"
+            android:onClick="logout"
+            android:title="Logout" />
+    </group>
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingRight="8dp"
+    android:background="@color/white"
+    android:paddingLeft="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:layout_gravity="bottom"-->
+        <!--            android:background="@android:drawable/ic_search_category_default" />-->
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:text="Select Class"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="@color/red"
+            android:textAlignment="center"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pr_progressbar"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f1f1f1"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Not Found"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:textColor="@color/red"
+            android:background="@color/white"
+            android:id="@+id/tv_datanotfound_all"
+            android:visibility="gone"/>
+        <ListView
+            android:id="@+id/listItems"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Save"
+            android:gravity="end"
+            android:id="@+id/tv_other"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:textColor="@color/red"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="close"
+            android:gravity="end"
+            android:background="@color/white"
+            android:id="@+id/close"
+            android:layout_margin="8dp"
+            android:textColor="@color/red"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
